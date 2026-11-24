@@ -20,6 +20,11 @@ python3 -m http.server 8000 -d site
 ```
 然後打開 http://localhost:8000
 
+## 上線
+- 網址：https://yucelduman749944-tech.github.io/xiaogugu/
+- 推到 `main` 就會由 `.github/workflows/pages.yml` 自動把 `site/` 發布到 GitHub Pages，大約一兩分鐘生效。
+- 版本標籤：`v1.0` 是從 Claude 桌面版移過來的第一版。
+
 ## 慣例
 - 文字用繁體中文、台灣用語、全形標點。
 - 顏色、字型一律用 `style.css` 的 `:root` 變數，不要寫死色碼。
