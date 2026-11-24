@@ -11,7 +11,9 @@ site/
 ├── index.html      # 頁面內容與 SVG 圖示（<symbol>）
 ├── css/style.css   # 全部樣式；設計色票與字型在最上面的 :root 變數
 ├── js/main.js      # 訂購計算機、托盤動畫、複製訂單、手機底部下單列
-└── img/            # 商品照片與標誌
+└── img/            # 商品照片與標誌（og-share.jpg 是分享圖）
+design/
+└── og-image.html   # 分享圖原始檔，產生方式見 design/README.md
 ```
 
 ## 本地預覽
@@ -28,7 +30,7 @@ python3 -m http.server 8000 -d site
 ## 慣例
 - 文字用繁體中文、台灣用語、全形標點。
 - 顏色、字型一律用 `style.css` 的 `:root` 變數，不要寫死色碼。
-- 價格規則（`js/main.js` 最上面）：單包 NT$280，運費 60，滿 3 包免運，買 5 送 1（5～9 包），10 包以上請客人私訊。改價格時，`index.html` 裡寫出來的文案和 `<meta description>` 也要一起改。
+- 價格規則（`js/main.js` 最上面）：單包 NT$280，運費 60，滿 3 包免運，買 5 送 1（5～9 包），10 包以上請客人私訊。改價格時，`index.html` 裡寫出來的文案、`<meta description>`、`og:image:alt` 和分享圖（`design/og-image.html`）都要一起改。
 - 路徑：頁面內的圖片、CSS、JS 一律用相對路徑（`img/xx.jpg`），本地預覽和線上才都能用。只有 `<head>` 的 `og:url`、`og:image`、`canonical` 要寫完整網址，換網域時記得一起改。
 - 圖示用 `index.html` 開頭的 `<symbol>`，用法是 `<svg><use href="#i-名稱"/></svg>`。
-- 新增圖片前先壓縮（單張盡量 < 250KB），放進 `site/img/`。
+- 新增圖片前先壓縮（單張盡量 < 250KB），放進 `site/img/`。分享圖 `og-share.jpg` 例外，它只給社群平台抓，訪客不會載入。

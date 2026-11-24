@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- FB / LINE 分享圖原始檔（1200×630）。產生方式見 design/README.md -->
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kraft:#c49a6c; --kraft-deep:#a97f53;
+  --label:#f4ead7; --label-edge:#e6d6b8;
+  --ink:#3a2414; --ink-soft:#4a2f1c;
+  --green:#3d6631; --roast:#8c3a1c; --peanut:#e2b04a;
+  --marker:linear-gradient(transparent 58%, rgba(226,176,74,.75) 58%, rgba(226,176,74,.75) 92%, transparent 92%);
+  --display:"LXGW WenKai TC","Kaiti TC",serif;
+  --body:"Noto Sans TC","PingFang TC",sans-serif;
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .23 0 0 0 0 .14 0 0 0 0 .08 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1200px;height:630px;overflow:hidden}
+body{font-family:var(--body);color:var(--ink);background:var(--kraft)}
+
+.card{position:relative;width:1200px;height:630px;display:grid;grid-template-columns:660px 540px;
+  background:var(--kraft);background-image:var(--grain)}
+
+/* 左：米色標籤紙 */
+.label{position:relative;margin:34px 0 34px 40px;padding:44px 40px 40px 52px;
+  background:var(--label);background-image:var(--grain);background-blend-mode:multiply;
+  border:2px solid var(--label-edge);border-radius:6px;
+  box-shadow:0 18px 40px -18px rgba(58,36,20,.55);
+  display:flex;flex-direction:column}
+.label::before{content:"";position:absolute;inset:12px;border:1.5px dashed rgba(58,36,20,.28);border-radius:3px;pointer-events:none}
+
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:76px;height:76px}
+.brand b{font-family:var(--display);font-size:32px;font-weight:700;letter-spacing:.06em}
+.brand small{display:block;font-size:14px;letter-spacing:.16em;color:var(--kraft-deep);font-weight:700;margin-top:2px}
+
+h1{font-family:var(--display);font-weight:700;font-size:60px;line-height:1.26;letter-spacing:.02em;margin-top:26px}
+h1 em{font-style:normal;background:var(--marker);padding:0 .08em}
+
+.lede{font-size:21px;line-height:1.6;color:var(--ink-soft);margin-top:14px;font-weight:500}
+
+.terms{margin-top:auto;display:flex;gap:10px}
+.terms span{font-size:20px;font-weight:700;padding:9px 16px;border-radius:999px;background:var(--ink);color:var(--label);white-space:nowrap}
+.terms span.alt{background:var(--roast)}
+
+/* 右：商品照 */
+.photo{position:relative;margin:34px 40px 34px 26px;border-radius:6px;overflow:hidden;
+  box-shadow:0 18px 40px -18px rgba(58,36,20,.6);border:6px solid var(--label)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 70%}
+.photo figcaption{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);
+  font-family:var(--display);font-weight:700;font-size:26px;white-space:nowrap;
+  background:var(--label);padding:6px 20px;border-radius:999px;box-shadow:0 6px 16px -6px rgba(0,0,0,.4)}
+.photo .g{color:var(--roast)} .photo .c{color:var(--green)}
+
+/* 限量印章 */
+.stamp{position:absolute;left:522px;top:346px;width:132px;height:132px;border-radius:50%;
+  border:4px solid var(--roast);color:var(--roast);background:rgba(244,234,215,.94);
+  display:grid;place-items:center;text-align:center;transform:rotate(-12deg);
+  font-family:var(--display);box-shadow:0 8px 18px -8px rgba(0,0,0,.5)}
+.stamp::before{content:"";position:absolute;inset:6px;border:1.5px solid var(--roast);border-radius:50%}
+.stamp small{display:block;font-size:17px;font-weight:700;letter-spacing:.1em}
+.stamp b{display:block;font-size:38px;line-height:1.1}
+</style>
+</head>
+<body>
+<div class="card">
+  <section class="label">
+    <div class="brand">
+      <img src="../site/img/logo-mark.png" alt="">
+      <div><b>小姑姑手作</b><small>南投在地・全手工花生脆糖</small></div>
+    </div>
+    <h1>每一顆花生，<br>都是<em>小姑姑</em>親手<br>挑過的堅持</h1>
+    <p class="lede">減糖硬脆，一口咬下不黏牙</p>
+    <div class="terms">
+      <span>NT$280／包</span>
+      <span>滿 3 包免運</span>
+      <span class="alt">買 5 送 1</span>
+    </div>
+  </section>
+  <figure class="photo">
+    <img src="../site/img/bags.jpg" alt="">
+    <figcaption><span class="g">爆蒜</span> ✕ <span class="c">鮮香菜</span></figcaption>
+  </figure>
+  <div class="stamp"><div><small>首波</small><b>限量</b><small>手作口味</small></div></div>
+</div>
+</body>
+</html>
